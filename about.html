@@ -146,12 +146,19 @@
 
               <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
                 <h3 class="resume-title">Formation</h3>
+                <div class="resume-item pb-0">
+                  <h4>2eme année de BTS SIO/SLAM à l’école ENSITECH -Marseille</h4>
+                  <p><em>A présent</em></p>
+                  <ul>
+                    <p><em>Marseille</em></p>
+                  </ul>
+                </div><!-- Edn Resume Item -->
 
                 <div class="resume-item pb-0">
                   <h4>1ère année de BTS SIO/SLAM à l’école ENSITECH -Marseille</h4>
-                  <p><em>A présent</em></p>
+                  <p><em>2024-2025</em></p>
                   <ul>
-                    <p><em>Nancy</em></p>
+                    <p><em>Marseille</em></p>
                   </ul>
                 </div><!-- Edn Resume Item -->
 
@@ -237,8 +244,7 @@
         <div><span>Mes</span> <span class="description-title">competences</span></div>
       </div><!-- End Section Title -->
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
+      <div class="container" data-aos="fade-up" data-aos-delay="100" id="skills-section">
         <div class="row skills-content skills-animation">
 
           <div class="col-lg-6">
@@ -246,26 +252,26 @@
             <div class="progress">
               <span class="skill"><span>HTML</span> <i class="val">60%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
                 </div>
               </div>
-            </div><!-- End Skills Item -->
+            </div>
 
             <div class="progress">
               <span class="skill"><span>CSS</span> <i class="val">50%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
                 </div>
               </div>
-            </div><!-- End Skills Item -->
+            </div>
 
             <div class="progress">
               <span class="skill"><span>JavaScript</span> <i class="val">35%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100">
                 </div>
               </div>
-            </div><!-- End Skills Item -->
+            </div>
 
           </div>
 
@@ -274,40 +280,88 @@
             <div class="progress">
               <span class="skill"><span>PHP</span> <i class="val">40%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
                 </div>
               </div>
-            </div><!-- End Skills Item -->
+            </div>
 
             <div class="progress">
               <span class="skill"><span>MySQL</span> <i class="val">60%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
                 </div>
               </div>
-            </div><!-- End Skills Item -->
+            </div>
 
             <div class="progress">
-              <span class="skill"><span>cybersécurité</span> <i class="val">40%</i></span>
+              <span class="skill"><span>Cybersécurité</span> <i class="val">40%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
                 </div>
               </div>
-            </div><!-- End Skills Item -->
+            </div>
 
             <div class="progress">
               <span class="skill"><span>Photoshop</span> <i class="val">40%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
                 </div>
               </div>
-            </div><!-- End Skills Item -->
+            </div>
 
           </div>
 
         </div>
-
       </div>
+
+      <!-- CSS -->
+      <style>
+        .progress-bar-wrap {
+          width: 100%;
+          background-color: #e0e0e0;
+          border-radius: 10px;
+          overflow: hidden;
+          margin-bottom: 15px;
+        }
+
+        .progress-bar {
+          height: 20px;
+          background-color: #4caf50;
+          width: 0;
+          /* départ à 0 pour animation */
+          transition: width 1.5s ease-in-out;
+        }
+
+        .skill {
+          display: flex;
+          justify-content: space-between;
+          font-weight: bold;
+          margin-bottom: 5px;
+        }
+      </style>
+
+      <!-- JS pour animation au scroll -->
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const skillsSection = document.getElementById('skills-section');
+          const progressBars = skillsSection.querySelectorAll('.progress-bar');
+
+          const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                progressBars.forEach(bar => {
+                  const width = bar.getAttribute('aria-valuenow');
+                  bar.style.width = width + '%';
+                });
+                observer.unobserve(skillsSection); // anime une seule fois
+              }
+            });
+          }, { threshold: 0.3 }); // déclenche quand 30% de la section est visible
+
+          observer.observe(skillsSection);
+        });
+      </script>
+
 
     </section><!-- /Skills Section -->
 
