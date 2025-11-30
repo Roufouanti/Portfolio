@@ -450,6 +450,147 @@ h6 {
   }
 }
 
+/* --- Section globale --- */
+.veille-symfony {
+  padding: 80px 20px;
+  background: #0f0f0f;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  animation: fadeIn 1s ease-out;
+}
+
+/* --- Header --- */
+.vs-header {
+  text-align: center;
+  margin-bottom: 60px;
+  animation: slideDown 1.2s ease-out;
+}
+
+.vs-logo {
+  width: 120px;
+  margin-bottom: 20px;
+}
+
+.vs-title {
+  font-size: 2.6rem;
+  font-weight: 700;
+}
+
+.vs-subtitle {
+  opacity: 0.8;
+  margin-top: 5px;
+}
+
+/* --- Container --- */
+.vs-container {
+  max-width: 950px;
+  margin: auto;
+  display: grid;
+  gap: 40px;
+}
+
+/* --- Cards --- */
+.vs-card {
+  background: #1a1a1a;
+  padding: 25px;
+  border-radius: 15px;
+  border: 1px solid #242424;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+  transition: transform .3s, box-shadow .3s;
+}
+
+.vs-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.12);
+}
+
+/* --- Timeline --- */
+.vs-timeline {
+  padding: 25px;
+  background: linear-gradient(180deg, #1a1a1a, #111);
+  border-radius: 15px;
+  border-left: 4px solid #6c5ce7;
+}
+
+.timeline-item {
+  margin: 30px 0;
+  padding-left: 15px;
+  border-left: 2px solid #6c5ce7;
+}
+
+.timeline-item .year {
+  font-weight: bold;
+  color: #a29bfe;
+}
+
+.timeline-item.highlight {
+  border-left: 2px solid #00cec9;
+}
+
+.timeline-item.highlight .year {
+  color: #00cec9;
+}
+
+/* --- Animations --- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1.4s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slide-up {
+  animation: slideUp 1.2s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.zoom-in {
+  animation: zoomIn 1.3s ease-out;
+}
+
+
 /*--------------------------------------------------------------
 # Global Footer
 --------------------------------------------------------------*/

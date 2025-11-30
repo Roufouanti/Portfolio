@@ -59,30 +59,68 @@
   <main class="main">
 
     <!-- Page Title -->
-    <div class="page-title" data-aos="fade">
-      <div class="heading">
-        <div class="container">
-          <div class="row d-flex justify-content-center text-center">
-            <div class="col-lg-8">
-              <h1>Veille technologique</h1>
-              <p class="mb-0">
-                La veille technologique consiste à surveiller et analyser les innovations pouvant impacter les
-                technologies du développement informatique. Elle permet d’anticiper les évolutions et d’adapter ses
-                compétences.
+    <section class="veille-intro section py-5" data-aos="fade-up">
+      <div class="container">
+
+        <div class="row justify-content-center text-center mb-5">
+          <div class="col-lg-10">
+
+            <p class="text-muted">
+              Dans le cadre de mon développement professionnel, je réalise une double veille :
+              <strong>technologique</strong> et <strong>juridique</strong>.
+              Celles-ci me permettent d’anticiper les évolutions du secteur numérique
+              et de garantir le respect des réglementations en vigueur.
+            </p>
+          </div>
+        </div>
+
+        <div class="row gy-5">
+
+          <!-- Veille Technologique -->
+          <div class="col-lg-6">
+            <div class="p-4 shadow rounded bg-white h-100">
+              <img src="assets/img/tech.jpg" class="img-fluid rounded mb-3" alt="Veille technologique">
+              <h3 class="fw-bold">Veille Technologique</h3>
+              <p class="mt-3">
+                La <strong>veille technologique</strong> est un processus structuré qui consiste à surveiller
+                et analyser les innovations, outils et tendances émergentes du domaine numérique.
+                Elle permet d’identifier les évolutions techniques majeures, d’adapter ses compétences
+                et d’anticiper les besoins futurs.
               </p>
-            </div>
-            <div class="col-lg-8 mt-4">
-              <h1>Veille juridique</h1>
-              <p class="mb-0">
-                La veille juridique permet de suivre les lois, règlements et décisions de la CNIL afin de garantir la
-                conformité
-                des pratiques professionnelles, notamment en matière de protection des données.
+              <p>
+                Elle repose sur l’analyse de sources fiables comme les blogs spécialisés, documentations
+                officielles, conférences, réseaux professionnels ou encore les annonces des éditeurs.
+                Dans mon cas, cette veille porte particulièrement sur
+                <strong>l’évolution du framework Symfony</strong>, ses fonctionnalités, ses performances
+                et ses bonnes pratiques.
               </p>
             </div>
           </div>
+
+          <!-- Veille Juridique -->
+          <div class="col-lg-6">
+            <div class="p-4 shadow rounded bg-white h-100">
+              <img src="assets/img/juri.jpeg" class="img-fluid rounded mb-3" alt="Veille juridique">
+              <h3 class="fw-bold">Veille Juridique</h3>
+              <p class="mt-3">
+                La <strong>veille juridique</strong> consiste à surveiller l’évolution des lois,
+                règlements, décisions de justice et recommandations des autorités compétentes.
+                Elle garantit le respect du cadre légal, en particulier dans les projets numériques
+                où la <strong>protection des données personnelles</strong> est essentielle.
+              </p>
+              <p>
+                Cette veille permet d’éviter les risques juridiques, de prévenir les sanctions
+                et d’assurer la conformité avec les obligations légales, notamment celles liées
+                au <strong>RGPD</strong>.
+                Mon suivi se concentre sur l’actualité de la <strong>CNIL</strong>
+                et les sanctions ou recommandations ayant un impact direct sur les entreprises.
+              </p>
+            </div>
+          </div>
+
         </div>
       </div>
-    </div><!-- End Page Title -->
+    </section>
 
     <!-- Veille Technologique -->
     <section id="about" class="about section">
@@ -90,98 +128,132 @@
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
         <div class="row gy-4 justify-content-center">
-          <div class="col-lg-4">
-            <img src="assets/img/symfony.png" alt="">
-            <a href="https://symfony.com/releases">Symfony – Releases</a>
+          <div class="col-lg-4 d-flex flex-column align-items-center">
+            <img src="assets/img/symfony.png" alt="" class="img-fluid mb-3">
+            <a href="https://symfony.com/releases" target="_blank">Symfony – Releases</a>
           </div>
 
           <div class="col-lg-8 content">
             <h3>Veille Technologique – Évolution de Symfony</h3>
 
             <p class="fst-italic py-3">
-              Symfony est un framework PHP puissant utilisé pour créer des applications web professionnelles.
-              Il évolue régulièrement afin d’améliorer la performance, la sécurité et l’expérience développeur.
+              Symfony est un framework PHP professionnel utilisé pour développer des applications web robustes
+              et sécurisées. Depuis 2005, il évolue constamment pour s’adapter aux bonnes pratiques du
+              développement moderne.
             </p>
 
             <ul>
-              <li><i class="bi bi-chevron-right"></i>
-                <strong>Compatibilité avec PHP 8+</strong> :
-                Symfony adopte les dernières fonctionnalités du langage, optimisant les performances.
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <strong>Symfony 2 (2011) – Révolution totale :</strong>
+                réécriture complète, apparition du conteneur de dépendances,
+                composants réutilisables, adoption massive de Composer.
               </li>
 
-              <li><i class="bi bi-chevron-right"></i>
-                <strong>Attributs PHP</strong> :
-                remplacement progressif des annotations pour une syntaxe plus moderne et native.
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <strong>Symfony 3 (2015) – Stabilisation :</strong>
+                amélioration du Form Component, documentation enrichie,
+                montée en performance et versions LTS.
               </li>
 
-              <li><i class="bi bi-chevron-right"></i>
-                <strong>Optimisation du framework</strong> :
-                container plus rapide, cache HTTP renforcé, HttpClient amélioré.
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <strong>Symfony 4 (2017) – Modernisation :</strong>
+                Symfony Flex, recettes automatiques, structure de projet légère,
+                fichiers .env et optimisation du cache.
               </li>
 
-              <li><i class="bi bi-chevron-right"></i>
-                <strong>Outils pour développeurs</strong> :
-                Symfony CLI, Flex, recettes automatiques pour accélérer la création d’applications.
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <strong>Symfony 5 (2019) – Montée en puissance :</strong>
+                HttpClient, Messenger amélioré, +40% de performance,
+                meilleure expérience développeur.
+              </li>
+
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <strong>Symfony 6 (2021) – PHP 8 :</strong>
+                arrivée massive des attributs PHP, sécurité renforcée,
+                type system modernisé, code plus strict.
+              </li>
+
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <strong>Symfony 7 (2023–2025) – Version actuelle :</strong>
+                support PHP 8.2+, performance accrue, optimisation du container,
+                compatibilité renforcée avec API Platform et Turbo.
               </li>
             </ul>
+
+            <div class="tool-card" data-aos="zoom-in">
+              <div class="tool-icon">
+                <i class="bi bi-rss-fill"></i>
+              </div>
+              <h3>Outil de Veille – Flux RSS Symfony</h3>
+              <p>
+                Pour suivre en temps réel les prochaines évolutions du framework Symfony
+                (mises à jour, nouvelles versions, annonces officielles), j'utilise le flux RSS
+                du blog Symfony. Cet outil permet de rester informé automatiquement dès la publication
+                d’une nouveauté.
+              </p>
+              <a href="https://symfony.com/blog/rss.xml" target="_blank" class="btn btn-primary">
+                Consulter le Flux RSS
+              </a>
+            </div>
+
+
+            <h5 class="mt-3">Source :</h5>
+            <a href="https://symfony.com/blog" target="_blank">Symfony – Blog officiel</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Veille Juridique -->
+    <section id="resume" class="resume section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4 justify-content-center">
+          <div class="col-lg-4">
+            <img src="assets/img/cnl.jpg" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-8 content">
+            <h4>Veille Juridique – Protection des données (RGPD)</h4>
+
+            <p class="fst-italic py-3">
+              La veille juridique permet de suivre les décisions officielles liées à la cybersécurité et à la
+              protection
+              des données personnelles. Ces informations sont essentielles pour respecter le RGPD.
+            </p>
+
+            <p class="fst-italic py-3">
+              Le 15 mai 2025, la CNIL a sanctionné la société SOLOCAL MARKETING SERVICES à hauteur de
+              <strong>900 000 €</strong> pour démarchage non sollicité et partage illégal de données personnelles.
+              Cette affaire rappelle l’importance de recueillir un consentement clair et de protéger les
+              informations des utilisateurs.
+            </p>
 
             <h5>Outils de suivi :</h5>
             <ul>
-              <li>🔹 Symfony Blog officiel</li>
-              <li>🔹 GitHub – Symfony (commits & releases)</li>
-              <li>🔹 Google Alerts : “Symfony”, “PHP 8”</li>
-              <li>🔹 SensioLabs Newsletter</li>
+              <li>🔹 CNIL – Communiqués officiels</li>
+              <li>🔹 Legifrance – Textes réglementaires</li>
+              <li>🔹 Google Alerts : “RGPD”, “CNIL”, “cybersécurité”</li>
+              <li>🔹 ANSSI – Recommandations de sécurité</li>
             </ul>
 
             <h5>Source :</h5>
-            <a href="https://symfony.com/blog">Symfony – Blog officiel</a>
+            <a href="https://www.cnil.fr/fr/sanction-de-900-000-euros-societe-solocal-marketing-services">CNIL –
+              Décision officielle</a>
+
           </div>
         </div>
 
-        <!-- Veille Juridique -->
-        <section id="resume" class="resume section">
+      </div>
 
-          <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-            <div class="row gy-4 justify-content-center">
-              <div class="col-lg-4">
-                <img src="assets/img/cnl.jpg" class="img-fluid" alt="">
-              </div>
-
-              <div class="col-lg-8 content">
-                <h4>Veille Juridique – Protection des données (RGPD)</h4>
-
-                <p class="fst-italic py-3">
-                  La veille juridique permet de suivre les décisions officielles liées à la cybersécurité et à la
-                  protection
-                  des données personnelles. Ces informations sont essentielles pour respecter le RGPD.
-                </p>
-
-                <p class="fst-italic py-3">
-                  Le 15 mai 2025, la CNIL a sanctionné la société SOLOCAL MARKETING SERVICES à hauteur de
-                  <strong>900 000 €</strong> pour démarchage non sollicité et partage illégal de données personnelles.
-                  Cette affaire rappelle l’importance de recueillir un consentement clair et de protéger les
-                  informations des utilisateurs.
-                </p>
-
-                <h5>Outils de suivi :</h5>
-                <ul>
-                  <li>🔹 CNIL – Communiqués officiels</li>
-                  <li>🔹 Legifrance – Textes réglementaires</li>
-                  <li>🔹 Google Alerts : “RGPD”, “CNIL”, “cybersécurité”</li>
-                  <li>🔹 ANSSI – Recommandations de sécurité</li>
-                </ul>
-
-                <h5>Source :</h5>
-                <a href="https://www.cnil.fr/fr/sanction-de-900-000-euros-societe-solocal-marketing-services">CNIL –
-                  Décision officielle</a>
-
-              </div>
-            </div>
-
-          </div>
-
-        </section>
+    </section>
 
   </main>
 
