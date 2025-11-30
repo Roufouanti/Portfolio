@@ -23,7 +23,7 @@
   /* Background color for the entire website, including individual sections */
   --default-color: hsl(0, 0%, 2%);
   /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #ffffff;
+  --heading-color: #1a1a1aff;
   /* Color for headings, subheadings and title throughout the website */
   --accent-color: #2f91d3;
   /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
@@ -53,14 +53,14 @@
 
 .light-background {
   --background-color: #1a1a1a;
-  --surface-color: #343434;
+  --surface-color: #080707;
 }
 
 .dark-background {
   --background-color: rgba(15, 15, 15, 0.975);
   --default-color: #ffffff;
-  --heading-color: #ffffff;
-  --surface-color: #292929f9;
+  --heading-color: #eae5e5;
+  --surface-color: #060505f9;
   --contrast-color: #000000;
 }
 
@@ -155,7 +155,7 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  --background-color: rgba(0, 0, 0, 0);
+  --background-color: rgba(227, 232, 235, 0);
   color: var(--default-color);
   background-color: var(--background-color);
   padding: 15px 0;
@@ -280,7 +280,7 @@ h6 {
     transition: 0.3s;
     border-radius: 4px;
     z-index: 99;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 30px rgba(246, 246, 246, 0.1);
   }
 
   .navmenu .dropdown ul li {
@@ -415,12 +415,12 @@ h6 {
   }
 
   .navmenu .dropdown ul ul {
-    background-color: rgba(33, 37, 41, 0.1);
+    background-color: rgba(234, 237, 240, 0.1);
   }
 
   .navmenu .dropdown>.dropdown-active {
     display: block;
-    background-color: rgba(33, 37, 41, 0.03);
+    background-color: rgba(234, 242, 250, 0.03);
   }
 
   .mobile-nav-active {
@@ -453,9 +453,11 @@ h6 {
 /*--------------------------------------------------------------
 # Global Footer
 --------------------------------------------------------------*/
+
 .footer {
   color: var(--default-color);
   background-color: var(--background-color);
+  /* ← corrigé pour être visible */
   font-size: 14px;
   text-align: center;
   padding: 30px 0;
@@ -471,7 +473,8 @@ h6 {
 }
 
 .footer p {
-  font-size: 15;
+  font-size: 15px;
+  /* ← ajout "px" manquant */
   font-style: italic;
   padding: 0;
   margin: 0 0 30px 0;
@@ -511,6 +514,7 @@ h6 {
   font-size: 13px;
   padding-top: 5px;
 }
+
 
 /*--------------------------------------------------------------
 # Preloader
@@ -684,7 +688,9 @@ section,
 }
 
 .section-title div {
-  color: var(--heading-color);
+
+  color: #1a1a1a;
+
   margin: 0;
   margin: 0;
   font-size: 28px;
