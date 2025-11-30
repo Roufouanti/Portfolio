@@ -451,12 +451,18 @@ h6 {
 }
 
 /* --- Section globale --- */
+
 .veille-symfony {
   padding: 80px 20px;
   background: #0f0f0f;
   color: white;
   font-family: "Poppins", sans-serif;
   animation: fadeIn 1s ease-out;
+}
+
+.main {
+  padding-top: 80px;
+  /* hauteur du menu */
 }
 
 /* --- Header --- */
