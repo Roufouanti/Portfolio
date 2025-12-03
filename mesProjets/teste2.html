@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcul du total des achats</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        .container {
+            background: #f8f8f8;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+        input {
+            width: 50px;
+            margin: 5px;
+            padding: 5px;
+            text-align: center;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        #resultat {
+            margin-top: 20px;
+            padding: 10px;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            display: inline-block;
+        }
+    </style>
+    <script>
+        function calculerTotal() {
+            let total = 0;
+            let inputs = document.getElementsByClassName("prix-article");
+            
+            for (let i = 0; i < inputs.length; i++) {
+                let valeur = parseFloat(inputs[i].value) || 0;
+                total += valeur;
+            }
+            
+            let reduction = total > 100 ? 0.15 : 0.05;
+            let totalReduit = total * (1 - reduction);
+            
+            document.getElementById("resultat").innerHTML = `
+                <strong>Total avant réduction :</strong> ${total.toFixed(2)}€<br>
+                <strong>Réduction appliquée :</strong> ${(reduction * 100)}%<br>
+                <strong>Total après réduction :</strong> ${totalReduit.toFixed(2)}€
+            `;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>Calcul du total des achats</h2>
+        <p>Entrez les prix des 6 articles :</p>
+        <input type="number" class="prix-article" placeholder="0">
+        <input type="number" class="prix-article" placeholder="0">
+        <input type="number" class="prix-article" placeholder="0">
+        <input type="number" class="prix-article" placeholder="0">
+        <input type="number" class="prix-article" placeholder="0">
+        <input type="number" class="prix-article" placeholder="0">
+        <br>
+        <button onclick="calculerTotal()">Calculer</button>
+        <div id="resultat"></div>
+    </div>
+    
+</body>
+</html>

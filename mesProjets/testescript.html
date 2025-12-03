@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affichage en script</title>
+</head>
+<body>
+    <p id="output"></p>
+    <script>
+        
+        // 1. Affichage dans la console
+        console.log("Ceci est un message dans la console.");
+
+        // 2. Affichage avec une alerte
+        alert("Bienvenue ! Ceci est une boîte d'alerte.");
+
+        // 3. Affichage direct dans le document
+        document.write("<h2>Affichage avec document.write()</h2>");
+        document.write("<p>Ce texte a été ajouté avec JavaScript.</p>");
+
+        // 4. Affichage dans un élément HTML avec innerHTML
+        function afficherMessage() {
+            document.getElementById("output").innerHTML = "Texte ajouté avec innerHTML.";
+            function afficherAlert() {
+            window.alert("Ceci est une alerte !");
+        }
+
+        function afficherConfirm() {
+            let reponse = window.confirm("Voulez-vous continuer ?");
+            document.getElementById("resultat").innerHTML = "Réponse : " + (reponse ? "Oui" : "Non");
+        }
+
+        function afficherPrompt() {
+            let nom = window.prompt("Entrez votre nom :", "");
+            if (nom) {
+                document.getElementById("resultat").innerHTML = "Bonjour, " + nom + " !";
+            }
+        }
+          
+        }
+    </script>
+    
+</body>
+</html>

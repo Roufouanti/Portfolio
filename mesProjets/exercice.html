@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Résultats des Candidats - Ensitech</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #34495e;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 40px 20px;
+            margin: 20px;
+        }
+
+        .logo {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .logo img {
+            max-width: 150px;
+        }
+
+        .results-table {
+            width: 80%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .results-table th, .results-table td {
+            padding: 15px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        .results-table th {
+            background-color: #34495e;
+            color: white;
+        }
+
+        .admitted {
+            background-color: #2ecc71;
+            color: white;
+        }
+
+        .rejected {
+            background-color: #e74c3c;
+            color: white;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .contact, .about {
+            background-color: #bdc3c7;
+            border-radius: 8px;
+            margin: 20px 0;
+            padding: 20px;
+        }
+
+    </style>
+     <div class="logo-left">
+        <img src="Logo ENSITECH 143x143.png" alt="Logo Ensitech">
+    </div>
+    <h1>Université Ensitech - Résultats des Candidats</h1>
+    <!-- Logo à droite -->
+    <div class="logo-right">
+        <img src="esem_cp_logo.jpg">
+    </div>
+</head>
+<body>
+
+<header>
+    Université Ensitech - Résultats des Candidats
+</header>
+
+<!-- Menu de navigation -->
+<nav>
+    <a href="#about-section">À propos</a>
+   <a href="#results-section">Résultats</a>
+    <a href="#contact-section">Contact</a>
+   
+</nav>
+
+<!-- Section Logo -->
+<section id="logo-section" class="logo">
+    <div class="container">
+        <img src="images.jpg" alt="Logo Française">
+    </div>
+</section>
+
+<!-- Section des Résultats des Candidats -->
+<section id="results-section">
+    <div class="container">
+        <h2>Tableau des Résultats des Candidats</h2>
+        <table class="results-table" id="results">
+            <thead>
+                <tr>
+                    <th>Nom du Candidat</th>
+                    <th>Note</th>
+                    <th>Statut</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Les résultats seront insérés ici via JavaScript -->
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<!-- Section Contact -->
+<section id="contact-section" class="contact">
+    <div class="container">
+        <h2>Contact</h2>
+        <p>Email : contact@ensitech.com</p>
+        <p>Téléphone : +33 1 23 45 67 89</p>
+    </div>
+</section>
+
+<!-- Section À propos -->
+<section id="about-section" class="about">
+    <div class="container">
+        <h2>À propos de l'Université Ensitech</h2>
+        <p>L'Université Ensitech est un établissement d'enseignement supérieur de renommée internationale, offrant des formations de qualité dans divers domaines scientifiques et techniques.</p>
+    </div>
+</section>
+
+<footer>
+    &copy; 2025 Université Ensitech
+</footer>
+
+<script>
+    // 1. Créer un tableau contenant les noms des 5 candidats
+    const candidats = ["fanah", "felipe", "alicia", "salahidine", "oumouri"];
+    
+    // 2. Fonction pour attribuer une note aléatoire entre 0 et 20 à chaque candidat
+    function genererNote() {
+        return Math.floor(Math.random() * 21); // Note entre 0 et 20
+    }
+    
+    // 3. Fonction pour déterminer si le candidat est admis ou ajourné
+    function determinerStatut(note) {
+        if (note >= 10) {
+            return "Admis";
+        } else {
+            return "Ajourné";
+        }
+    }
+
+    // 4. Fonction pour générer et afficher les résultats dans un tableau
+    function afficherResultats() {
+        let html = "";
+        
+        // Parcourir chaque candidat
+        candidats.forEach(candidat => {
+            const note = genererNote();
+            const statut = determinerStatut(note);
+
+            // Créer une ligne du tableau pour chaque candidat
+            html += `
+                <tr class="${statut.toLowerCase()}">
+                    <td>${candidat}</td>
+                    <td>${note}</td>
+                    <td>${statut}</td>
+                </tr>
+            `;
+        });
+
+        // Insérer les lignes dans le corps du tableau
+        document.querySelector("#results tbody").innerHTML = html;
+    }
+
+    // Appeler la fonction pour afficher les résultats
+    afficherResultats();
+</script>
+
+</body>
+</html>

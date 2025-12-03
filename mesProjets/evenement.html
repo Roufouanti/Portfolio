@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jeu : Clique sur la bonne couleur</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+      margin: 0;
+      flex-direction: column;
+      text-align: center;
+    }
+    #score {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    #instructions {
+      font-size: 18px;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+    .case {
+      width: 80px;
+      height: 80px;
+      display: inline-block;
+      margin: 10px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .case:hover {
+      transform: scale(1.1);
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="score">Score : 0</div>
+  <div id="instructions">Cliquez sur la couleur indiquée ci-dessous</div>
+  <div id="palette"></div>
+  <button id="start-btn">Démarrer le jeu</button>
+
+  <script>
+    let score = 0; // Score initial
+    let scoreDisplay = document.getElementById("score");
+    let instructions = document.getElementById("instructions");
+    let palette = document.getElementById("palette");
+    let startBtn = document.getElementById("start-btn");
+    let jeuActif = false; // Indicateur du jeu
+    let couleurCorrecte; // La couleur à cliquer
+    let timer;
+
+    // Liste des couleurs avec leurs noms
+    const couleurs = [
+      { nom: "bleu", hex: "#3498db" },
+      { nom: "rouge", hex: "#e74c3c" },
+      { nom: "vert", hex: "#2ecc71" },
+      { nom: "jaune", hex: "#f39c12" },
+      { nom: "violet", hex: "#9b59b6" },
+      { nom: "turquoise", hex: "#1abc9c" },
+      { nom: "gris", hex: "#34495e" },
+      { nom: "cyan", hex: "#16a085" },
+      { nom: "orange", hex: "#e67e22" },
+      { nom: "marron", hex: "#8e44ad" }
+      /
+      { nom:  "gris",hex:"#808080" },
+      { nom: "marron",hex:"#654321" },
+    ];
+
+    // Fonction pour créer la palette de couleurs
+    function creerPalette() {
+      palette.innerHTML = ""; // Réinitialiser la palette
+      couleurs.forEach(couleur => {
+        let caseElement = document.createElement("div");
+        caseElement.classList.add("case");
+        caseElement.style.backgroundColor = couleur.hex;
+        caseElement.dataset.nom = couleur.nom; // Ajouter le nom de la couleur comme attribut
+        palette.appendChild(caseElement);
+
+        // Ajouter un événement de clic à chaque case
+        caseElement.addEventListener("click", cliquerSurCase);
+      });
+    }
+
+    // Fonction pour commencer un nouveau tour
+    function nouveauTour() {
+      // Choisir une couleur correcte au hasard
+      couleurCorrecte = couleurs[Math.floor(Math.random() * couleurs.length)];
+
+      // Afficher l'instruction : quelle couleur le joueur doit cliquer
+      instructions.textContent = `Cliquez sur la couleur : ${couleurCorrecte.nom.charAt(0).toUpperCase() + couleurCorrecte.nom.slice(1)}`;
+
+      // Réinitialiser les couleurs de la palette (elles ne sont pas encore cliquables)
+      creerPalette();
+
+      // Lancer le timer pour le tour
+      startTimer();
+    }
+
+    // Fonction de timer
+    function startTimer() {
+      timer = setTimeout(() => {
+        instructions.textContent = "Trop tard ! Vous avez perdu.";
+        alert("Trop tard ! Vous avez perdu.");
+        jeuActif = false; // Fin du jeu
+        startBtn.disabled = false; // Réactiver le bouton pour recommencer
+      }, 10000); // Le joueur a 2 secondes pour cliquer
+    }
+
+    // Fonction quand le joueur clique sur une case
+    function cliquerSurCase(e) {
+      if (!jeuActif) return; // Si le jeu n'est pas actif, ne rien faire
+
+      // Vérifier si le nom de la case est la bonne couleur
+      if (e.target.dataset.nom === couleurCorrecte.nom) {
+        score += 1; // Augmenter le score
+        scoreDisplay.textContent = `Score : ${score}`;
+        instructions.textContent = "Bien joué ! Nouveau tour...";
+        setTimeout(nouveauTour, 1000); // Nouveau tour après une petite pause
+      } else {
+        // Si mauvaise couleur, fin du jeu
+        instructions.textContent = "Mauvaise couleur, vous avez perdu !";
+        alert("Mauvaise couleur, vous avez perdu !");
+        jeuActif = false; // Fin du jeu
+        startBtn.disabled = false; // Réactiver le bouton pour recommencer
+      }
+    }
+
+    // Fonction pour démarrer le jeu
+    function demarrerJeu() {
+      score = 0; // Réinitialiser le score
+      scoreDisplay.textContent = `Score : ${score}`;
+      jeuActif = true; // Le jeu commence
+      instructions.textContent = "Cliquez sur la couleur indiquée ci-dessous";
+      startBtn.disabled = true; // Désactiver le bouton pendant le jeu
+      nouveauTour(); // Lancer le premier tour
+    }
+
+    // Ajouter un événement au bouton
+    startBtn.addEventListener("click", demarrerJeu);
+  </script>
+</body>
+</html>

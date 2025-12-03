@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page d'Achat</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .produits { display: flex; gap: 20px; }
+        .produit { border: 1px solid #ccc; padding: 10px; text-align: center; }
+        img { width: 100px; height: 100px; }
+    </style>
+</head>
+<body>
+    <h1>Commande de Produits</h1>
+    <div class="produits">
+        <div class="produit" data-nom="Produit A" data-prix="10">
+            <img src="sprite..jpg" alt="Sprite">
+            <p>Sprite - 2€</p>
+        </div>
+        <div class="produit" data-nom="Produit B" data-prix="20">
+            <img src="oasis.jpg" alt="Oasis">
+            <p>Oasis - 1,5€</p>
+        </div>
+        <div class="produit" data-nom="Produit C" data-prix="30">
+            <img src="coca.jpg" alt="Coca-cola">
+            <p>Coca-cola - 2€</p>
+        </div>
+        <div class="produit" data-nom="Produit D" data-prix="40">
+            <img src="fanta.webp" alt="Fanta">
+            <p>Fanta - 2€</p>
+        </div>
+    </div>
+    
+    <h2>Passer une commande</h2>
+    <form id="commandeForm">
+        <label>Nom :</label>
+        <input type="text" id="nom" required>
+        <br>
+        <label>Email :</label>
+        <input type="email" id="email" required>
+        <br>
+        <label>Produit :</label>
+        <select id="produit">
+            <option value="10">Produit A - 10€</option>
+            <option value="20">Produit B - 20€</option>
+            <option value="30">Produit C - 30€</option>
+            <option value="40">Produit D - 40€</option>
+        </select>
+        <br>
+        <label>Quantité :</label>
+        <input type="number" id="quantite" value="1" min="1">
+        <br>
+        <p>Total : <span id="total">10</span>€</p>
+        <button type="submit">Commander</button>
+    </form>
+
+    <script>
+        document.getElementById('produit').addEventListener('change', calculerTotal);
+        document.getElementById('quantite').addEventListener('input', calculerTotal);
+
+        function calculerTotal() {
+            let prix = parseFloat(document.getElementById('produit').value);
+            let quantite = parseInt(document.getElementById('quantite').value);
+            document.getElementById('total').innerText = prix * quantite;
+        }
+    </script>
+</body>
+</html>
