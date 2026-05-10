@@ -63,6 +63,7 @@
     .projet-content h5 {
       margin-top: 0;
       font-weight: 600;
+
     }
 
     .btn {
@@ -72,6 +73,9 @@
 
     p {
       text-align: justify;
+      line-height: 1.7;
+      hyphens: auto;
+
     }
   </style>
 </head>
@@ -90,10 +94,10 @@
         <ul>
           <li><a href="index.html">Accueil</a></li>
           <li><a href="about.html">A propos</a></li>
-          <li><a href="resume.html">Formation</a></li>
+          <li><a href="formation.html">Formation</a></li>
           <li><a href="projets.html" class="active">Projets</a></li>
-          <li><a href="tcs.html">TCS</a></li>
           <li><a href="veille.html">Veille</a></li>
+          <li><a href="tcs.html">TCS</a></li>
           <li><a href="contact.html">Contact</a></li>
 
         </ul>
@@ -112,13 +116,50 @@
           <div class="row d-flex justify-content-center text-center">
             <div class="col-lg-8">
               <p class="mb-0">
-                Au cours de mon parcours scolaire, j'ai eu l'opportunité de travailler sur plusieurs projets, certains
-                réalisés individuellement et d'autres en collaboration avec mes collègues. Ces projets m'ont permis
-                d'appliquer mes connaissances en programmation et en développement d'applications, tout en renforçant
-                mes compétences en travail d'équipe et en gestion de projets.
+                <!-- ======= Présentation entreprise ======= -->
+              <section id="entreprise" class="section">
+                <div class="container" data-aos="fade-up">
 
-                Ces expériences ont été enrichissantes, car elles m'ont appris à résoudre des problématiques concrètes
-                et à concevoir des outils pratiques et utiles
+                  <div class="section-title text-center">
+                    <h2>Présentation de l’entreprise NETBFRS</h2>
+
+                  </div>
+
+                  <div class="projet-card">
+                    <h4>NETBFRS</h4>
+
+                    <div class="text-center mb-3">
+                      <img src="assets/img/image.png" alt="Logo NETBFRS" style="max-width:150px;">
+                    </div>
+                    <p>
+                      L’entreprise NETBFRS est une académie spécialisée dans les technologies de l’information,
+                      située à Aix-en-Provence en France.
+                    </p>
+
+                    <p>
+                      NETBFRS est partenaire du programme Cisco Networking Academy, qui propose des formations
+                      dans les domaines des réseaux informatiques, des systèmes et de la cybersécurité.
+                    </p>
+
+                    <p>
+                      L’objectif de l’entreprise est de former les étudiants et les professionnels aux technologies
+                      numériques en leur permettant d’acquérir des compétences techniques dans le domaine informatique.
+                    </p>
+
+                    <p>
+                      Les formations proposées abordent plusieurs thématiques comme les réseaux informatiques,
+                      la cybersécurité, les systèmes Linux ainsi que les bases du matériel informatique.
+                    </p>
+
+                    <p>
+                      Grâce à ces formations, les apprenants développent des compétences utiles pour travailler
+                      dans les métiers de l’informatique.
+                    </p>
+
+                  </div>
+
+                </div>
+              </section>
               </p>
             </div>
           </div>
@@ -131,8 +172,8 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title text-center">
-          <h2>Projets & Mini-Projets</h2>
-          <p>Mes travaux et expérimentations techniques</p>
+          <h2>Projets</h2>
+
         </div>
 
         <div class="row gy-4 justify-content-center">
@@ -154,38 +195,22 @@
             </div>
           </div>
 
-
-
-          <!-- Projet 2 - Plateforme COSEP -->
+          <!-- Mini-projet Git/GitHub -->
           <div class="col-lg-6 col-md-12">
             <div class="projet-card d-flex flex-column flex-lg-row align-items-center" data-aos="fade-up"
               data-aos-delay="150">
-              <img src="assets/img/cosep.jpg" class="img-fluid projet-img" alt="Plateforme COSEP">
+              <img src="assets/img/contacts.png" class="img-fluid projet-img" alt="Application gestion de contacts">
               <div class="projet-content ps-lg-3 mt-3 mt-lg-0">
-                <h4>Plateforme gestion urgences sanitaires</h4>
-                <p>Développement d’une plateforme web pour gérer en temps réel les urgences sanitaires aux Comores,
-                  améliorant la coordination des interventions.</p>
-                <p><strong>Technologies :</strong> html, CSS, PHP, JS, MySQL</p>
-                <a href="assets/projet2.pdf" class="btn btn-primary">Voir plus</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Mini-projet 1 - Symfony installation/configuration ;  <div class="col-lg-6 col-md-12">
-            <div class="projet-card d-flex flex-column flex-lg-row align-items-center" data-aos="fade-up"
-              data-aos-delay="200">
-              <img src="assets/img/symfony2.png" class="img-fluid projet-img" alt="Mini-projet Symfony">
-              <div class="projet-content ps-lg-3 mt-3 mt-lg-0">
-                <h4>Mini-projet Symfony - Installation & Configuration</h4>
-                <p>Mini-projet pour apprendre à installer Symfony, configurer l’environnement et créer un projet basique
-                  avec les bonnes pratiques. Parfait pour se familiariser avec le framework.</p>
-                <p><strong>Technologies :</strong> Symfony, PHP, Composer</p>
-                <a href="https://github.com/tonpseudo/mini-symfony" class="btn btn-outline-dark" target="_blank">Voir
+                <h4>Application web de gestion de contacts</h4>
+                <p>Développement d’une application permettant d’ajouter, modifier, afficher et supprimer des contacts.
+                  Réalisée en stage pour faciliter la gestion des informations utilisateurs au sein de l’entreprise.</p>
+                <p><strong>Technologies :</strong> PHP, MySQL, HTML, CSS</p>
+                <a href="https://github.com/Roufouanti/Gestion_Contact" class="btn btn-outline-dark"
+                  target="_blank">Voir sur
                   GitHub</a>
               </div>
             </div>
-          </div> -->
-
+          </div>
 
           <!-- Projet 3 - AEB -->
           <div class="col-lg-6 col-md-12">
@@ -204,22 +229,103 @@
             </div>
           </div>
 
-          <!-- Mini-projet Git/GitHub -->
+          <!-- Projet 2 - Plateforme COSEP -->
           <div class="col-lg-6 col-md-12">
             <div class="projet-card d-flex flex-column flex-lg-row align-items-center" data-aos="fade-up"
               data-aos-delay="150">
-              <img src="assets/img/contacts.png" class="img-fluid projet-img" alt="Application gestion de contacts">
+              <img src="assets/img/cosep.jpg" class="img-fluid projet-img" alt="Plateforme COSEP">
               <div class="projet-content ps-lg-3 mt-3 mt-lg-0">
-                <h4>Application web de gestion de contacts</h4>
-                <p>Développement d’une application permettant d’ajouter, modifier, afficher et supprimer des contacts.
-                  Réalisée en stage pour faciliter la gestion des informations utilisateurs au sein de l’entreprise.</p>
-                <p><strong>Technologies :</strong> PHP, MySQL, HTML, CSS</p>
-                <a href="https://github.com/Roufouanti/Gestion_Contact" class="btn btn-outline-dark"
-                  target="_blank">Voir sur
-                  GitHub</a>
+                <h4>Plateforme gestion urgences sanitaires</h4>
+                <p>Développement d’une plateforme web pour gérer en temps réel les urgences sanitaires aux Comores,
+                  améliorant la coordination des interventions.</p>
+                <p><strong>Technologies :</strong> html, CSS, PHP, JS, MySQL</p>
+                <a href="assets/projet2.pdf" class="btn btn-primary">Voir plus</a>
               </div>
             </div>
           </div>
+
+          <!-- ===================== -->
+          <!-- DOSSIERS BTS -->
+          <!-- ===================== -->
+
+          <section class="section py-5">
+            <div class="container">
+
+              <div class="section-title text-center mb-5">
+                <h2>Dossiers BTS SIO</h2>
+                <p>
+                  Dossiers réalisés dans le cadre des épreuves professionnelles
+                  du BTS SIO SLAM.
+                </p>
+              </div>
+
+              <div class="row gy-4">
+
+                <!-- E5 -->
+                <div class="col-lg-6">
+                  <div class="projet-card p-4 shadow rounded h-100">
+
+                    <h4 class="mb-3">
+                      E5 — Support et mise à disposition de services informatiques
+                    </h4>
+
+                    <p>
+                    <p>
+                      Ce dossier présente les projets et missions réalisés durant
+                      ma formation et mes périodes en entreprise.
+                    </p>
+                    </p>
+
+                    <a href="assets/DOSSIER E5 ROUFOUANTI OUMOURI.pdf" target="_blank" class="btn btn-outline-dark">
+                      Consulter le dossier E5
+                    </a>
+
+                  </div>
+                </div>
+
+                <!-- E6 -->
+                <div class="col-lg-6">
+                  <div class="projet-card p-4 shadow rounded h-100">
+
+                    <h4 class="mb-3">
+                      E6 — Conception et développement d’applications
+                    </h4>
+
+                    <p>
+                      Ce dossier contient les différentes réalisations développées
+                      durant ma formation
+
+                    </p>
+
+                    <a href="assets/BTSSIREAPROE6.pdf" target="_blank" class="btn btn-outline-dark">
+                      Consulter le dossier E6
+                    </a>
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </section>
+
+          <!-- Mini-projet 1 - Symfony installation/configuration ;  <div class="col-lg-6 col-md-12">
+            <div class="projet-card d-flex flex-column flex-lg-row align-items-center" data-aos="fade-up"
+              data-aos-delay="200">
+              <img src="assets/img/symfony2.png" class="img-fluid projet-img" alt="Mini-projet Symfony">
+              <div class="projet-content ps-lg-3 mt-3 mt-lg-0">
+                <h4>Mini-projet Symfony - Installation & Configuration</h4>
+                <p>Mini-projet pour apprendre à installer Symfony, configurer l’environnement et créer un projet basique
+                  avec les bonnes pratiques. Parfait pour se familiariser avec le framework.</p>
+                <p><strong>Technologies :</strong> Symfony, PHP, Composer</p>
+                <a href="https://github.com/tonpseudo/mini-symfony" class="btn btn-outline-dark" target="_blank">Voir
+                  GitHub</a>
+              </div>
+            </div>
+          </div> -->
+
+
+
+
 
 
         </div>

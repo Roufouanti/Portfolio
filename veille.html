@@ -44,10 +44,11 @@
         <ul>
           <li><a href="index.html">Accueil</a></li>
           <li><a href="about.html">A propos</a></li>
-          <li><a href="resume.html">formation</a></li>
+          <li><a href="formation.html">formation</a></li>
           <li><a href="projets.html">Projets</a></li>
-          <li><a href="tcs.html">TCS</a></li>
           <li><a href="veille.html" class="active">Veille</a></li>
+          <li><a href="tcs.html">TCS</a></li>
+
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -123,117 +124,372 @@
     </section>
 
     <!-- Veille Technologique -->
-    <section id="about" class="about section">
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row gy-4 justify-content-center">
+    <!-- ========================= -->
+    <!-- VEILLE TECHNOLOGIQUE -->
+    <!-- ========================= -->
 
-          <div class="col-lg-4 d-flex flex-column align-items-center">
-            <img src="assets/img/symfony.png" alt="Logo Symfony" class="img-fluid mb-3" style="max-width: 200px;">
-            <a href="https://symfony.com/releases" target="_blank" class="btn btn-sm btn-outline-secondary">
-              <i class="bi bi-calendar3"></i> Calendrier des versions
-            </a>
+    <section id="veille-techno" class="resume section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="section-title">
+          <h2>Veille technologique</h2>
+          <div>L’écosystème Symfony</div>
+        </div>
+
+        <div class="row gy-4 justify-content-center align-items-center">
+
+          <!-- Image -->
+          <div class="col-lg-4 text-center">
+            <img src="assets/img/symfony.png" class="img-fluid rounded shadow-sm" alt="Symfony Logo"
+              style="max-width: 260px;">
+
+            <div class="mt-3">
+              <a href="https://symfony.com/releases" target="_blank" class="btn btn-outline-primary btn-sm">
+                <i class="bi bi-calendar3"></i>
+                Calendrier Symfony
+              </a>
+            </div>
           </div>
 
+          <!-- Contenu -->
           <div class="col-lg-8 content">
-            <h3>Veille Technologique – L'écosystème Symfony</h3>
 
-            <p class="fst-italic py-3">
-              Symfony est un framework PHP utilisé pour créer des applications web professionnelles.
-              Ma veille porte sur son évolution vers plus de <strong>simplicité</strong> et de
-              <strong>sécurité</strong>.
+            <h3 class="mb-3">
+              Symfony : évolution et actualités
+            </h3>
+
+            <p class="fst-italic">
+              Symfony est un framework PHP utilisé pour développer des applications web professionnelles.
+              Ma veille technologique porte principalement sur les nouvelles versions,
+              les améliorations de performance et les outils modernes proposés par Symfony.
             </p>
 
-            <ul class="list-unstyled">
-              <li class="mb-3">
-                <i class="bi bi-chevron-right text-primary"></i>
-                <strong>Modernisation (Versions 6 & 7) :</strong> Utilisation des dernières fonctionnalités de PHP 8
-                pour un code plus court, plus lisible et plus facile à maintenir.
-              </li>
-              <li class="mb-3">
-                <i class="bi bi-chevron-right text-primary"></i>
-                <strong>Performance & Sécurité :</strong> Optimisation du moteur pour charger les pages plus vite et
-                intégration native de protections contre les piratages (CSRF, XSS).
-              </li>
-              <li class="mb-3">
-                <i class="bi bi-chevron-right text-primary"></i>
-                <strong>Innovation :</strong> Simplification du développement Front-end avec l'outil
-                "AssetMapper", qui permet de gérer le design sans outils complexes.
-              </li>
-            </ul>
+            <!-- Cards -->
+            <div class="row gy-4 mt-2">
 
-            <div class="tool-card p-4 bg-light border-start border-primary border-4 shadow-sm" data-aos="zoom-in">
-              <h5 class="mb-2"><i class="bi bi-rss-fill text-primary"></i> Ma méthode de veille</h5>
-              <p class="mb-3">
-                Je consulte régulièrement le <strong>Blog Officiel Symfony</strong>. Cela me permet d'anticiper les
-                mises à jour de sécurité et de découvrir les nouvelles bonnes pratiques de la communauté.
+              <!-- Card 1 -->
+              <div class="col-md-6">
+                <div class="p-4 shadow-sm rounded bg-white h-100 border-start border-primary border-4">
+
+                  <h5 class="fw-bold mb-3">
+                    Symfony 7.3
+                  </h5>
+
+                  <p>
+                    Symfony 7.3 apporte plusieurs améliorations importantes
+                    pour simplifier le développement moderne avec PHP 8.
+                  </p>
+
+                  <ul class="ps-3">
+                    <li>Nouveaux composants optimisés</li>
+                    <li>Amélioration des performances</li>
+                    <li>Code plus maintenable</li>
+                    <li>Optimisation du cache</li>
+                  </ul>
+
+                  <a href="https://symfony.com/releases/7.3" target="_blank"
+                    class="btn btn-sm btn-outline-primary mt-2">
+                    Source officielle
+                  </a>
+
+                </div>
+              </div>
+
+              <!-- Card 2 -->
+              <div class="col-md-6">
+                <div class="p-4 shadow-sm rounded bg-white h-100 border-start border-primary border-4">
+
+                  <h5 class="fw-bold mb-3">
+                    Évolution d’AssetMapper
+                  </h5>
+
+                  <p>
+                    Symfony continue d’améliorer AssetMapper afin de gérer
+                    le JavaScript et le CSS sans utiliser Webpack.
+                  </p>
+
+                  <ul class="ps-3">
+                    <li>Configuration simplifiée</li>
+                    <li>Chargement plus rapide</li>
+                    <li>Compatible HTTP/2</li>
+                    <li>Meilleures performances front-end</li>
+                  </ul>
+
+                  <a href="https://symfony.com/doc/7.3/frontend/asset_mapper.html" target="_blank"
+                    class="btn btn-sm btn-outline-primary mt-2">
+                    Documentation Symfony
+                  </a>
+
+                </div>
+              </div>
+              <!-- Card 3 -->
+              <div class="col-md-6">
+                <div class="p-4 shadow-sm rounded bg-white h-100 border-start border-primary border-4">
+
+                  <h5 class="fw-bold mb-3">
+                    Symfony 7.3 publié
+                  </h5>
+
+                  <p>
+                    mai 2025, Symfony 7.3 a été officiellement publié avec
+                    plusieurs améliorations pour moderniser le développement PHP.
+                  </p>
+
+                  <ul class="ps-3">
+                    <li>Nouvelles fonctionnalités PHP 8</li>
+                    <li>Amélioration de l’autowiring</li>
+                    <li>Optimisation des composants</li>
+                    <li>Meilleure expérience développeur</li>
+                  </ul>
+
+                  <a href="https://symfony.com/blog/symfony-7-3-curated-new-features" target="_blank"
+                    class="btn btn-sm btn-outline-primary mt-2">
+                    Source officielle
+                  </a>
+
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Méthode de veille -->
+            <div class="tool-card p-4 bg-light border-start border-primary border-4 shadow-sm mt-4">
+
+              <h5 class="mb-3">
+                <i class="bi bi-rss-fill text-primary"></i>
+                Ma méthode de veille
+              </h5>
+
+              <p class="mb-2">
+                Je consulte régulièrement les sources officielles Symfony afin de suivre
+                les nouvelles versions, les mises à jour de sécurité
+                et les bonnes pratiques utilisées par la communauté.
               </p>
-              <a href="https://symfony.com/blog" target="_blank" class="btn btn-primary btn-sm">
-                Voir les actualités Symfony
-              </a>
+
+              <ul class="ps-3 mb-3">
+                <li>Blog officiel Symfony</li>
+                <li>Documentation Symfony</li>
+
+
+              </ul>
+
+              <div class="d-flex flex-wrap gap-2">
+
+                <a href="https://symfony.com/blog" target="_blank" class="btn btn-primary btn-sm">
+                  Blog Symfony
+                </a>
+
+                <a href="https://symfony.com/releases" target="_blank" class="btn btn-outline-primary btn-sm">
+                  Versions Symfony
+                </a>
+
+                <a href="https://symfony.com/doc/current/index.html" target="_blank"
+                  class="btn btn-outline-dark btn-sm">
+                  Documentation
+                </a>
+
+              </div>
+
             </div>
 
           </div>
         </div>
       </div>
     </section>
-    <!-- Veille Juridique -->
-    <section id="resume" class="resume section">
+    <!-- =========================
+     VEILLE JURIDIQUE - ACTUALITÉS RGPD
+========================= -->
+
+
+    <!-- ========================= -->
+    <!-- VEILLE JURIDIQUE -->
+    <!-- ========================= -->
+
+    <section id="veille-juridique" class="resume section">
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-        <div class="row gy-4 justify-content-center">
-          <div class="col-lg-4">
-            <img src="assets/img/cnl.jpg" class="img-fluid" alt="">
+        <div class="section-title">
+          <h2>Veille juridique</h2>
+          <div>Protection des données – RGPD</div>
+        </div>
+
+        <div class="row gy-4 justify-content-center align-items-center">
+
+          <!-- Image -->
+          <div class="col-lg-4 text-center">
+            <img src="assets/img/cnl.jpg" class="img-fluid rounded shadow-sm" alt="CNIL" style="max-width: 260px;">
+
+            <div class="mt-3">
+              <a href="https://www.cnil.fr/fr/actualites" target="_blank" class="btn btn-outline-primary btn-sm">
+                <i class="bi bi-newspaper"></i>
+                Actualités CNIL
+              </a>
+            </div>
           </div>
 
+          <!-- Contenu -->
           <div class="col-lg-8 content">
-            <h4>Veille Juridique – Protection des données (RGPD)</h4>
 
-            <p class="fst-italic py-3">
-              La veille juridique permet de suivre les décisions officielles liées à la cybersécurité et à la
-              protection
-              des données personnelles. Ces informations sont essentielles pour respecter le RGPD.
+            <h3 class="mb-3">
+              Suivi des actualités RGPD
+            </h3>
+
+            <p class="fst-italic">
+              Ma veille juridique porte principalement sur la protection des données personnelles,
+              les décisions de la CNIL et les obligations liées au RGPD.
+              Elle me permet de suivre les évolutions réglementaires et les risques liés
+              à la cybersécurité.
             </p>
 
-            <p class="fst-italic py-3">
-              Le 15 mai 2025, la CNIL a sanctionné la société SOLOCAL MARKETING SERVICES à hauteur de
-              <strong>900 000 €</strong> pour démarchage non sollicité et partage illégal de données personnelles.
-              Cette affaire rappelle l’importance de recueillir un consentement clair et de protéger les
-              informations des utilisateurs.
-            </p>
-            <p class="fst-italic py-3">
-              L’enregistrement du son par une caméra de vidéoprotection est interdit par la loi. Néanmoins,
-              l’installation d’un dispositif de captation sonore dans un lieu placé sous vidéoprotection peut être
-              légale, dans des cas très précis(26 mars 2026)
-            </p>
-            <p class="fst-italic py-3">
-              La CNIL souhaite promouvoir des solutions de cybersécurité conformes au RGPD, tant dans leur usage que dès
-              leur conception. Dans ce but, elle publie une recommandation destinée à accompagner les utilisateurs et
-              les fournisseurs de serveurs mandataires web filtrants(13 mars 2026)
-            </p>
+            <!-- Cards -->
+            <div class="row gy-4 mt-2">
+
+              <!-- Card 1 -->
+              <div class="col-md-6">
+                <div class="p-4 shadow-sm rounded bg-white h-100 border-start border-primary border-4">
+
+                  <h5 class="fw-bold mb-3">
+                    Sanction CNIL – SOLOCAL
+                  </h5>
+
+                  <p>
+                    En mai 2025, la CNIL a sanctionné la société
+                    SOLOCAL MARKETING SERVICES à hauteur de
+                    900 000 € pour démarchage commercial illégal.
+                  </p>
+
+                  <ul class="ps-3">
+                    <li>Absence de consentement clair</li>
+                    <li>Partage illégal de données</li>
+                    <li>Non-respect du RGPD</li>
+                    <li>Protection insuffisante des utilisateurs</li>
+                  </ul>
+
+                  <a href="https://www.cnil.fr/fr/sanction-de-900-000-euros-societe-solocal-marketing-services"
+                    target="_blank" class="btn btn-sm btn-outline-primary mt-2">
+                    Source officielle
+                  </a>
+
+                </div>
+              </div>
+
+              <!-- Card 2 -->
+              <div class="col-md-6">
+                <div class="p-4 shadow-sm rounded bg-white h-100 border-start border-primary border-4">
+
+                  <h5 class="fw-bold mb-3">
+                    Cybersécurité & RGPD
+                  </h5>
+
+                  <p>
+                    La CNIL publie régulièrement des recommandations
+                    afin d’aider les entreprises à sécuriser
+                    les données personnelles.
+                  </p>
+
+                  <ul class="ps-3">
+                    <li>Sécurisation des accès</li>
+                    <li>Protection des bases de données</li>
+                    <li>Gestion des mots de passe</li>
+                    <li>Prévention des cyberattaques</li>
+                  </ul>
+
+                  <a href="https://www.cnil.fr/fr/securite" target="_blank" class="btn btn-sm btn-outline-primary mt-2">
+                    Recommandations CNIL
+                  </a>
+
+                </div>
+              </div>
+              <!-- Card 3 -->
+              <div class="col-md-6">
+                <div class="p-4 shadow-sm rounded bg-white h-100 border-start border-primary border-4">
+
+                  <h5 class="fw-bold mb-3">
+                    Données personnelles & demandes de crédit
+                  </h5>
+
+                  <p>
+                    En mai 2026, la CNIL a publié de nouvelles recommandations
+                    pour mieux protéger les données personnelles utilisées
+                    lors des demandes de crédit bancaire.
+                  </p>
+
+                  <ul class="ps-3">
+                    <li>Transparence sur l’utilisation des données</li>
+                    <li>Protection contre les abus et le surendettement</li>
+                    <li>Droit d’explication des décisions automatisées</li>
+                    <li>Contrôle renforcé des établissements bancaires</li>
+                  </ul>
+
+                  <a href="https://www.cnil.fr/fr/demandes-de-credit-comprendre-lutilisation-de-vos-donnees-et-vos-droits"
+                    target="_blank" class="btn btn-sm btn-outline-primary mt-2">
+                    Source officielle
+                  </a>
+
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Méthode de veille -->
+            <div class="tool-card p-4 bg-light border-start border-primary border-4 shadow-sm mt-4">
+
+              <h5 class="mb-3">
+                <i class="bi bi-shield-lock-fill text-primary"></i>
+                Ma méthode de veille
+              </h5>
+
+              <p class="mb-2">
+                Je consulte régulièrement les sources officielles afin de suivre
+                les nouvelles réglementations liées au RGPD,
+                les décisions de la CNIL et les recommandations en cybersécurité.
+              </p>
+
+              <ul class="ps-3 mb-3">
+                <li>CNIL – Actualités officielles</li>
+                <li>ANSSI – Recommandations cybersécurité</li>
+
+              </ul>
+
+              <div class="d-flex flex-wrap gap-2">
+
+                <a href="https://www.cnil.fr/fr/actualites" target="_blank" class="btn btn-primary btn-sm">
+                  Actualités CNIL
+                </a>
 
 
-            <h5>Outils de suivi :</h5>
-            <ul>
-              <a href="https://www.cnil.fr/fr/actualites">CNIL –</a>
 
+                <a href="https://cyber.gouv.fr/" target="_blank" class="btn btn-outline-primary btn-sm">
+                  ANSSI
+                </a>
 
-              <li> CNIL – Communiqués officiels</li>
-              <li> Legifrance – Textes réglementaires</li>
-              <li> Google Alerts : “RGPD”, “CNIL”, “cybersécurité”</li>
-              <li> ANSSI – Recommandations de sécurité</li>
-            </ul>
+              </div>
 
-            <h5>Source :</h5>
-            <a href="https://www.cnil.fr/fr/sanction-de-900-000-euros-societe-solocal-marketing-services">CNIL –
-              Décision officielle</a>
+            </div>
 
           </div>
         </div>
-
       </div>
-
     </section>
+
+    <div class="tool-card p-4 bg-light shadow-sm rounded mt-4">
+      <h5 class="fw-bold mb-3">
+        <i class="bi bi-bell-fill"></i> Suivi automatique des actualités
+      </h5>
+
+      <p>
+        Afin de rester à jour sur les évolutions de Symfony et du RGPD,
+        j’utilise Google Alerts pour recevoir automatiquement les nouvelles
+        publications liées à la sécurité, aux mises à jour et aux décisions
+        officielles de la CNIL.
+      </p>
+
+      <a href="https://www.google.com/alerts" target="_blank" class="btn btn-sm btn-outline-dark">
+        Accéder à Google Alerts
+      </a>
+    </div>
 
   </main>
 
